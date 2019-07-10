@@ -1,1 +1,38 @@
 @import "variables";
+
+// Reset Rule
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+header {
+	img {
+		max-width: 400px;
+	}
+
+	nav {
+		background-color: @gray;
+		.heading2();
+		width: 66%;
+		margin-left: auto;
+		padding-right: 5%;
+
+		ul {
+			display: flex;
+			justify-content: space-around;
+
+			li {
+				display: inline;
+				list-style-type: none;
+				padding: 2%;
+
+				a:link, a:visited {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

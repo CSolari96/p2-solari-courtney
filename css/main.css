@@ -48,3 +48,39 @@
 .border-line {
   border-bottom: 2px solid #da1f1c;
 }
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+header img {
+  max-width: 400px;
+}
+header nav {
+  background-color: #4d4d4d;
+  font-family: quatro-slab, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+  width: 66%;
+  margin-left: auto;
+  padding-right: 5%;
+}
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+header nav ul li {
+  display: inline;
+  list-style-type: none;
+  padding: 2%;
+}
+header nav ul li a:link,
+header nav ul li a:visited {
+  color: #fff;
+  text-decoration: none;
+}
