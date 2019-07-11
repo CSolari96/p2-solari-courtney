@@ -250,3 +250,23 @@ main section.get-involved div .square-content p {
       align-self: flex-end;
   z-index: 1;
 }
+aside section {
+  background-color: #ffcd00;
+  padding: 5%;
+}
+aside section div {
+  color: #fff;
+  border-bottom: 2px solid #da1f1c;
+  padding-bottom: 1%;
+  margin-bottom: 2%;
+}
+aside section div h4 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+}
+aside img {
+  width: 100%;
+  margin: 5% 0;
+}
