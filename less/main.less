@@ -7,6 +7,14 @@
 	border: 0;
 }
 
+img {
+	width: 100%;
+}
+
+body {
+	.paragraph();
+}
+
 header {
 	width: 100%;
 
@@ -82,4 +90,50 @@ header {
 			}
 		}
 	} 
+}
+
+main {
+	// Banner Image
+	header {
+
+		div {
+			background-image: url("../img/emblem-banner.png");
+			background-size: cover;
+			background-position: bottom;
+			min-height: 130px;
+			padding: 2%;
+			color: #fff;
+		}
+		
+		.border-line();
+
+		h2 {
+			.heading1();
+			font-size: 30px;
+
+			span {
+				color: @gold;
+			}
+		}
+
+		a {
+			.button();
+			text-align: center;
+			font-size: 14px;
+			display: block;
+			width: 55%;
+			padding: 4% 2%;
+			margin: 3% 0;
+			text-decoration: none;
+			transition: 0.3s;
+
+			&:hover, &:active {
+				background-color: @gray;
+				transition: 0.3s;
+			}
+		}
+	}
+	// End Banner Image
+
+	
 }
