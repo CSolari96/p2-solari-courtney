@@ -83,6 +83,7 @@ header #open-menu {
   color: #fff;
   font-size: 30px;
   padding: 1% 5% 1% 2%;
+  z-index: 2;
 }
 header nav {
   background-color: #4d4d4d;
@@ -226,6 +227,8 @@ main section.get-involved div:after {
   content: "";
   display: block;
   padding-bottom: 100%;
+  background-color: #004c97;
+  opacity: 0.6;
 }
 main section.get-involved div .square-content {
   position: absolute;
@@ -245,4 +248,5 @@ main section.get-involved div .square-content p {
   text-align: right;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  z-index: 1;
 }
