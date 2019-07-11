@@ -94,7 +94,7 @@ header {
 
 main {
 	// Banner Image
-	header {
+	.banner-image {
 
 		div {
 			background-image: url("../img/emblem-banner.png");
@@ -135,5 +135,18 @@ main {
 	}
 	// End Banner Image
 
-	
+	// Sections
+	section {
+		margin: 5%;
+
+		&.get-involved {
+			h3 {
+				.heading2();
+				text-align: center;
+				background-color: @gray;
+				color: @gold;
+				padding: 2%;
+			}
+		}
+	}
 }

@@ -28,12 +28,14 @@
   font-weight: 400;
   font-style: normal;
   font-size: 19px;
+  color: #707070;
 }
 .intro-header {
   font-family: quatro-slab, serif;
   font-weight: 400;
   font-style: normal;
   font-size: 21px;
+  color: #004c97;
 }
 .button {
   background-color: #da1f1c;
@@ -63,6 +65,7 @@ body {
   font-weight: 400;
   font-style: normal;
   font-size: 19px;
+  color: #707070;
 }
 header {
   width: 100%;
@@ -141,12 +144,12 @@ header .desktop-menu {
     text-decoration: none;
   }
 }
-main header {
+main .banner-image {
   border-bottom: 2px solid #da1f1c;
   padding-bottom: 1%;
   margin-bottom: 2%;
 }
-main header div {
+main .banner-image div {
   background-image: url("../img/emblem-banner.png");
   background-size: cover;
   background-position: bottom;
@@ -154,17 +157,17 @@ main header div {
   padding: 2%;
   color: #fff;
 }
-main header h2 {
+main .banner-image h2 {
   font-family: quatro-slab, serif;
   font-weight: 600;
   font-style: normal;
   font-size: 37px;
   font-size: 30px;
 }
-main header h2 span {
+main .banner-image h2 span {
   color: #ffcd00;
 }
-main header a {
+main .banner-image a {
   background-color: #da1f1c;
   border-radius: 40px;
   color: #fff;
@@ -183,9 +186,23 @@ main header a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-main header a:hover,
-main header a:active {
+main .banner-image a:hover,
+main .banner-image a:active {
   background-color: #4d4d4d;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+main section {
+  margin: 5%;
+}
+main section.get-involved h3 {
+  font-family: quatro-slab, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #4d4d4d;
+  color: #ffcd00;
+  padding: 2%;
 }
