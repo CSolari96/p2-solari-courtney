@@ -151,7 +151,47 @@ main {
 				padding: 2%;
 			}
 
+			div {
+				width: 85%;
+				margin: 5% auto;
+				position: relative;
+				background-size: cover;
+				background-position: center;
 
+				&.join {
+					background-image: url("../img/join-tile.jpg");
+				}
+
+				&.events {
+					background-image: url("../img/events-tile.jpg");
+				}
+
+				&.donate {
+					background-image: url("../img/donate-tile.jpg");
+				}
+
+				&:after {
+					content: "";
+					display: block;
+					padding-bottom: 100%;
+				}
+
+				.square-content {
+					position: absolute;
+					width: 90%;
+					height: 90%;
+					padding: 5%;
+					display: flex;
+					justify-content: flex-end;
+
+					p {
+						font-size: 40px;
+						color: #fff;
+						text-align: right;
+						align-self: flex-end;
+					}
+				}
+			}
 		}
 	}
 }

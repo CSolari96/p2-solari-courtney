@@ -206,3 +206,43 @@ main section.get-involved h3 {
   color: #ffcd00;
   padding: 2%;
 }
+main section.get-involved div {
+  width: 85%;
+  margin: 5% auto;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+main section.get-involved div.join {
+  background-image: url("../img/join-tile.jpg");
+}
+main section.get-involved div.events {
+  background-image: url("../img/events-tile.jpg");
+}
+main section.get-involved div.donate {
+  background-image: url("../img/donate-tile.jpg");
+}
+main section.get-involved div:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+main section.get-involved div .square-content {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+main section.get-involved div .square-content p {
+  font-size: 40px;
+  color: #fff;
+  text-align: right;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
