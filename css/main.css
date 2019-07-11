@@ -53,8 +53,22 @@
   padding: 0;
   border: 0;
 }
+header {
+  width: 100%;
+}
 header img {
   max-width: 400px;
+  width: 75%;
+  padding: 6% 2%;
+}
+header #open-menu {
+  background-color: #4d4d4d;
+  position: fixed;
+  top: 5%;
+  right: 0;
+  color: #fff;
+  font-size: 30px;
+  padding: 1% 5% 1% 2%;
 }
 header nav {
   background-color: #4d4d4d;
@@ -63,24 +77,56 @@ header nav {
   font-style: normal;
   font-size: 18px;
   text-transform: uppercase;
-  width: 66%;
-  margin-left: auto;
-  padding-right: 5%;
 }
-header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+header .mobile-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
 }
-header nav ul li {
-  display: inline;
-  list-style-type: none;
-  padding: 2%;
-}
-header nav ul li a:link,
-header nav ul li a:visited {
-  color: #fff;
+header .mobile-menu a {
+  padding: 1%;
   text-decoration: none;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+header .mobile-menu .close-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+header .desktop-menu {
+  display: none;
+}
+@media (min-width: 950px) {
+  header .desktop-menu {
+    display: block;
+    width: 66%;
+    margin-left: auto;
+    padding-right: 5%;
+  }
+  header .desktop-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  header .desktop-menu ul li {
+    display: inline;
+    list-style-type: none;
+    padding: 2%;
+  }
+  header .desktop-menu ul li a:link,
+  header .desktop-menu ul li a:visited {
+    color: #fff;
+    text-decoration: none;
+  }
 }
