@@ -139,17 +139,6 @@ main {
 
 		a {
 			.button();
-			text-align: center;
-			font-size: 14px;
-			display: block;
-			margin: 3% 0;
-			text-decoration: none;
-			transition: 0.3s;
-
-			&:hover, &:active {
-				background-color: @gray;
-				transition: 0.3s;
-			} // End :hover and :active
 		} // End a
 	} // End Banner Image
 
@@ -270,7 +259,6 @@ main {
 	} // End sections
 
 	.subpage-content {
-			
 		.about-images {
 			width: 100%;
 			.flex-display();
@@ -292,6 +280,7 @@ main {
 				flex-direction: column;
 				width: 30%;
 				float: right;
+				margin-bottom: 5%;
 			} // End media query
 		} // End about-images
 
@@ -306,6 +295,7 @@ main {
 			@media (min-width: 900px) {
 				width: 65%;
 				float: left;
+				margin-bottom: 5%;
 			} // End media query
 		} // End about
 
@@ -359,6 +349,47 @@ aside {
 		width: @default-width;
 		margin: 3% auto;
 	} // End media query
+
+	&.conference-info {	
+		clear: both;
+
+		section {
+			background-color: @blue;
+			color: #fff;
+			padding: 5% 0;
+
+			div {
+				width: @default-width;
+				margin: auto;
+
+				h3 {
+					.heading3();
+				} // End h3
+
+				a {
+					.button();
+				} // End a
+			} // End div
+
+			@media (min-width: 900px) {
+				margin-right: 0;
+				max-width: 50%;
+			} // End media query
+		} // End section
+
+		@media (min-width: 750px) {
+			.flex-display();
+
+			div {
+				width: 70%;
+				align-self: center;
+			} // End div
+		} // End media query
+
+		@media (min-width: 900px) {
+			width: 100%;
+		} // End media query
+	} // End conference-info
 } // End aside
 
 footer {

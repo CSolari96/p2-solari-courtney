@@ -48,6 +48,19 @@
   text-transform: uppercase;
   width: 180px;
   padding: 15px 5px;
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  margin: 3% 0;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.button:hover,
+.button:active {
+  background-color: #4d4d4d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .border-line {
   border-bottom: 2px solid #da1f1c;
@@ -375,6 +388,7 @@ main .subpage-content .about-images div img {
             flex-direction: column;
     width: 30%;
     float: right;
+    margin-bottom: 5%;
   }
 }
 main .subpage-content .about-content {
@@ -388,6 +402,7 @@ main .subpage-content .about-content p {
   main .subpage-content .about-content {
     width: 65%;
     float: left;
+    margin-bottom: 5%;
   }
 }
 @media (min-width: 900px) {
@@ -443,6 +458,72 @@ aside img {
     display: flex;
     width: 85%;
     margin: 3% auto;
+  }
+}
+aside.conference-info {
+  clear: both;
+}
+aside.conference-info section {
+  background-color: #004c97;
+  color: #fff;
+  padding: 5% 0;
+}
+aside.conference-info section div {
+  width: 85%;
+  margin: auto;
+}
+aside.conference-info section div h3 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+}
+aside.conference-info section div a {
+  background-color: #da1f1c;
+  border-radius: 40px;
+  color: #fff;
+  font-family: quatro-slab, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+  width: 180px;
+  padding: 15px 5px;
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  margin: 3% 0;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+aside.conference-info section div a:hover,
+aside.conference-info section div a:active {
+  background-color: #4d4d4d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (min-width: 900px) {
+  aside.conference-info section {
+    margin-right: 0;
+    max-width: 50%;
+  }
+}
+@media (min-width: 750px) {
+  aside.conference-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  aside.conference-info div {
+    width: 70%;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+}
+@media (min-width: 900px) {
+  aside.conference-info {
+    width: 100%;
   }
 }
 footer {
