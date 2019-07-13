@@ -126,6 +126,12 @@ header .flex-display img {
   width: 75%;
   padding: 6% 2%;
 }
+@media (min-width: 600px) {
+  header .flex-display img {
+    width: 80%;
+    padding: 6% 5%;
+  }
+}
 header .flex-display .desktop-menu {
   display: none;
 }
