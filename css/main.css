@@ -46,6 +46,8 @@
   font-style: normal;
   font-size: 18px;
   text-transform: uppercase;
+  width: 180px;
+  padding: 15px 5px;
 }
 .border-line {
   border-bottom: 2px solid #da1f1c;
@@ -155,7 +157,7 @@ main .banner-image div {
   background-size: cover;
   background-position: bottom;
   min-height: 130px;
-  padding: 2%;
+  padding: 5%;
   color: #fff;
 }
 main .banner-image h2 {
@@ -177,11 +179,11 @@ main .banner-image a {
   font-style: normal;
   font-size: 18px;
   text-transform: uppercase;
+  width: 180px;
+  padding: 15px 5px;
   text-align: center;
   font-size: 14px;
   display: block;
-  width: 55%;
-  padding: 4% 2%;
   margin: 3% 0;
   text-decoration: none;
   -webkit-transition: 0.3s;
