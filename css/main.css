@@ -229,8 +229,31 @@ main .banner-image a:active {
 main section.home-intro {
   margin: 5%;
 }
-main section.home-intro img {
+main section.home-intro div {
   width: 100%;
+  max-width: 620px;
+  margin: auto;
+}
+main section.home-intro div img {
+  width: 100%;
+}
+@media (min-width: 950px) {
+  main section.home-intro div {
+    width: 100%;
+    margin-right: 5%;
+  }
+}
+@media (min-width: 950px) {
+  main section.home-intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main section.home-intro p {
+    width: 75%;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 main section.get-involved h3 {
   font-family: quatro-slab, serif;

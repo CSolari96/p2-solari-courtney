@@ -159,9 +159,29 @@ main {
 		&.home-intro {
 			margin: 5%;
 
-			img {
+			div {
 				width: 100%;
-			} // End img
+				max-width: 620px;
+				margin: auto;
+
+				img {
+					width: 100%;
+				} // End img
+
+				@media (min-width: 950px) {
+					width: 100%;
+					margin-right: 5%
+				} // End media query
+			} // End div
+
+			@media (min-width: 950px) {
+				.flex-display();
+
+				p {
+					width: 75%;
+					align-self: center;
+				} // End p
+			} // End media query
 		} // End home-intro
 
 		&.get-involved {
