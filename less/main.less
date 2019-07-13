@@ -153,6 +153,18 @@ main {
 		} // End a
 	} // End Banner Image
 
+	.subpage-header {
+		.border-line();
+
+		h2 {
+			background-color: @blue;
+			color: #fff;
+			.heading2();
+			text-align: center;
+			padding: 3%;
+		} // End h2
+	} // End subpage-header
+
 	// Sections
 	section {
 
@@ -255,6 +267,29 @@ main {
 				} // End media query
 			} // End div	
 		} // End get-involved
+
+		&.about-images {
+			width: 100%;
+			.flex-display();
+			justify-content: center;
+
+			div {
+				width: 33%;
+
+				img {
+					width: 100%;
+				} // End img
+			} // End div
+		} // End about
+
+		&.about {
+			width: @default-width;
+			margin: auto;
+
+			p {
+				padding: 2% 0;
+			}
+		}
 	} // End sections
 } // End main
 
