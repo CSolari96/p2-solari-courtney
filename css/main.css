@@ -347,7 +347,7 @@ main section.get-involved .grid-container .square .square-content p {
             justify-content: center;
   }
 }
-main section.about-images {
+main .subpage-content .about-images {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -356,18 +356,45 @@ main section.about-images {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main section.about-images div {
+main .subpage-content .about-images div {
   width: 33%;
 }
-main section.about-images div img {
+main .subpage-content .about-images div img {
   width: 100%;
 }
-main section.about {
+@media (min-width: 900px) {
+  main .subpage-content .about-images div {
+    width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  main .subpage-content .about-images {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30%;
+    float: right;
+  }
+}
+main .subpage-content .about-content {
   width: 85%;
   margin: auto;
 }
-main section.about p {
+main .subpage-content .about-content p {
   padding: 2% 0;
+}
+@media (min-width: 900px) {
+  main .subpage-content .about-content {
+    width: 65%;
+    float: left;
+  }
+}
+@media (min-width: 900px) {
+  main .subpage-content {
+    width: 85%;
+    margin: auto;
+  }
 }
 aside {
   margin: 2% 0;

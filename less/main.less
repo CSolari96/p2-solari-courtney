@@ -267,8 +267,11 @@ main {
 				} // End media query
 			} // End div	
 		} // End get-involved
+	} // End sections
 
-		&.about-images {
+	.subpage-content {
+			
+		.about-images {
 			width: 100%;
 			.flex-display();
 			justify-content: center;
@@ -279,18 +282,38 @@ main {
 				img {
 					width: 100%;
 				} // End img
-			} // End div
-		} // End about
 
-		&.about {
+				@media (min-width: 900px) {
+					width: 100%;
+				} // End media query
+			} // End div
+
+			@media (min-width: 900px) {
+				flex-direction: column;
+				width: 30%;
+				float: right;
+			} // End media query
+		} // End about-images
+
+		.about-content {
 			width: @default-width;
 			margin: auto;
 
 			p {
 				padding: 2% 0;
-			}
-		}
-	} // End sections
+			} // End p
+
+			@media (min-width: 900px) {
+				width: 65%;
+				float: left;
+			} // End media query
+		} // End about
+
+		@media (min-width: 900px) {
+			width: 85%;
+			margin: auto;
+		} // End media query
+	} // End subpage-content
 } // End main
 
 aside {
