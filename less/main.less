@@ -5,24 +5,14 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
-}
-
-img {
-	width: 100%;
-}
+} // End Reset Rule
 
 body {
 	.paragraph();
-}
+} // End Body
 
 header {
 	width: 100%;
-
-	img {
-		max-width: 400px;
-		width: 75%;
-		padding: 6% 2%;
-	}
 
 	#open-menu {
 		background-color: @gray;
@@ -33,12 +23,16 @@ header {
 		font-size: 30px;
 		padding: 1% 5% 1% 2%;
 		z-index: 2;
-	}
+
+		@media (min-width: 950px) {
+			display: none;
+		} // End Media Query
+	} // End open-menu
 
 	nav {
 		background-color: @gray;
 		.heading2();
-	}
+	} // End nav
 
 	.mobile-menu {
 		height: 100%;
@@ -56,42 +50,52 @@ header {
 			text-decoration: none;
 			display: block;
 			transition: 0.3s;
-		}
+		} // End a
 
 		.close-menu {
 			position: absolute;
 			top: 0;
 			right: 0;
-		}
-	}
+		} // End close-menu
+	} // End mobile-menu
 
-	.desktop-menu {
-		display: none;
+	.flex-display {
+		img {
+			max-width: 400px;
+			width: 75%;
+			padding: 6% 2%;
+		} // End img
 
-		@media (min-width: 950px) {
-			display: block;
-			width: 66%;
-			margin-left: auto;
-			padding-right: 5%;
+		.desktop-menu {
+			display: none;
 
-			ul {
-				display: flex;
-				justify-content: space-around;
+			@media (min-width: 950px) {
+				display: block;
+				width: 66%;
+				max-height: 55px;
+				margin-left: auto;
+				padding-right: 5%;
+				align-self: center;
 
-				li {
-					display: inline;
-					list-style-type: none;
-					padding: 2%;
+				ul {
+					display: flex;
+					justify-content: space-around;
 
-					a:link, a:visited {
-						color: #fff;
-						text-decoration: none;
-					}
-				}
-			}
-		}
-	} 
-}
+					li {
+						display: inline;
+						list-style-type: none;
+						padding: 2%;
+
+						a:link, a:visited {
+							color: #fff;
+							text-decoration: none;
+						} // End a:link, a:visted
+					} // End li
+				} // End ul
+			} // End Media Query
+		} // End desktop-menu
+	} // End flex-display	
+} // End header
 
 main {
 	// Banner Image
@@ -139,6 +143,10 @@ main {
 
 		&.home-intro {
 			margin: 5%;
+
+			img {
+				width: 100%;
+			}
 		}
 
 		&.get-involved {

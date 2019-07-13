@@ -54,13 +54,15 @@
   padding-bottom: 1%;
   margin-bottom: 2%;
 }
+.flex-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 * {
   margin: 0;
   padding: 0;
   border: 0;
-}
-img {
-  width: 100%;
 }
 body {
   font-family: brandon-grotesque, sans-serif;
@@ -72,11 +74,6 @@ body {
 header {
   width: 100%;
 }
-header img {
-  max-width: 400px;
-  width: 75%;
-  padding: 6% 2%;
-}
 header #open-menu {
   background-color: #4d4d4d;
   position: fixed;
@@ -86,6 +83,11 @@ header #open-menu {
   font-size: 30px;
   padding: 1% 5% 1% 2%;
   z-index: 2;
+}
+@media (min-width: 950px) {
+  header #open-menu {
+    display: none;
+  }
 }
 header nav {
   background-color: #4d4d4d;
@@ -119,30 +121,38 @@ header .mobile-menu .close-menu {
   top: 0;
   right: 0;
 }
-header .desktop-menu {
+header .flex-display img {
+  max-width: 400px;
+  width: 75%;
+  padding: 6% 2%;
+}
+header .flex-display .desktop-menu {
   display: none;
 }
 @media (min-width: 950px) {
-  header .desktop-menu {
+  header .flex-display .desktop-menu {
     display: block;
     width: 66%;
+    max-height: 55px;
     margin-left: auto;
     padding-right: 5%;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
-  header .desktop-menu ul {
+  header .flex-display .desktop-menu ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  header .desktop-menu ul li {
+  header .flex-display .desktop-menu ul li {
     display: inline;
     list-style-type: none;
     padding: 2%;
   }
-  header .desktop-menu ul li a:link,
-  header .desktop-menu ul li a:visited {
+  header .flex-display .desktop-menu ul li a:link,
+  header .flex-display .desktop-menu ul li a:visited {
     color: #fff;
     text-decoration: none;
   }
@@ -197,6 +207,9 @@ main .banner-image a:active {
 }
 main section.home-intro {
   margin: 5%;
+}
+main section.home-intro img {
+  width: 100%;
 }
 main section.get-involved h3 {
   font-family: quatro-slab, serif;
