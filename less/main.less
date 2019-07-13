@@ -191,52 +191,69 @@ main {
 				background-color: @gray;
 				color: @gold;
 				padding: 2%;
+
+				@media (min-width: 950px) {
+					width: 400px;
+					margin: auto;
+				}
 			} // End h3
 
-			div {
-				width: 85%;
-				margin: 5% auto;
-				position: relative;
-				background-size: cover;
-				background-position: center;
+			.grid-container {
+				.square {
+					width: 85%;
+					max-width: 330px;
+					margin: 5% auto;
+					position: relative;
+					background-size: cover;
+					background-position: center;
 
-				&.join {
-					background-image: url("../img/join-tile.jpg");
-				} // End join
+					&.join {
+						background-image: url("../img/join-tile.jpg");
+					} // End join
 
-				&.events {
-					background-image: url("../img/events-tile.jpg");
-				} // End events
+					&.events {
+						background-image: url("../img/events-tile.jpg");
+					} // End events
 
-				&.donate {
-					background-image: url("../img/donate-tile.jpg");
-				} //End donate
+					&.donate {
+						background-image: url("../img/donate-tile.jpg");
+					} //End donate
 
-				&:after {
-					content: "";
-					display: block;
-					padding-bottom: 100%;
-					background-color: @blue;
-					opacity: 0.6;
-				} // End after
+					&:after {
+						content: "";
+						display: block;
+						padding-bottom: 100%;
+						background-color: @blue;
+						opacity: 0.6;
+					} // End after
 
-				.square-content {
-					position: absolute;
-					width: 90%;
-					height: 90%;
-					padding: 5%;
-					display: flex;
-					justify-content: flex-end;
+					.square-content {
+						position: absolute;
+						width: 90%;
+						height: 90%;
+						padding: 5%;
+						display: flex;
+						justify-content: flex-end;
 
-					p {
-						font-size: 40px;
-						color: #fff;
-						text-align: right;
-						align-self: flex-end;
-						z-index: 1;
-					} // End p
-				} // End square-content
-			} // End div
+						p {
+							font-size: 40px;
+							color: #fff;
+							text-align: right;
+							align-self: flex-end;
+							z-index: 1;
+						} // End p
+					} // End square-content
+
+					@media (min-width: 650px) {
+						margin: 3%;
+					}
+				} // End square
+
+				@media (min-width: 650px) {
+					.flex-display();
+					justify-content: center;
+				}
+			} // End div	
 		} // End get-involved
 	} // End sections
 } // End main

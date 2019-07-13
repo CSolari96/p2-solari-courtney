@@ -266,30 +266,37 @@ main section.get-involved h3 {
   color: #ffcd00;
   padding: 2%;
 }
-main section.get-involved div {
+@media (min-width: 950px) {
+  main section.get-involved h3 {
+    width: 400px;
+    margin: auto;
+  }
+}
+main section.get-involved .grid-container .square {
   width: 85%;
+  max-width: 330px;
   margin: 5% auto;
   position: relative;
   background-size: cover;
   background-position: center;
 }
-main section.get-involved div.join {
+main section.get-involved .grid-container .square.join {
   background-image: url("../img/join-tile.jpg");
 }
-main section.get-involved div.events {
+main section.get-involved .grid-container .square.events {
   background-image: url("../img/events-tile.jpg");
 }
-main section.get-involved div.donate {
+main section.get-involved .grid-container .square.donate {
   background-image: url("../img/donate-tile.jpg");
 }
-main section.get-involved div:after {
+main section.get-involved .grid-container .square:after {
   content: "";
   display: block;
   padding-bottom: 100%;
   background-color: #004c97;
   opacity: 0.6;
 }
-main section.get-involved div .square-content {
+main section.get-involved .grid-container .square .square-content {
   position: absolute;
   width: 90%;
   height: 90%;
@@ -301,13 +308,28 @@ main section.get-involved div .square-content {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-main section.get-involved div .square-content p {
+main section.get-involved .grid-container .square .square-content p {
   font-size: 40px;
   color: #fff;
   text-align: right;
   -ms-flex-item-align: end;
       align-self: flex-end;
   z-index: 1;
+}
+@media (min-width: 650px) {
+  main section.get-involved .grid-container .square {
+    margin: 3%;
+  }
+}
+@media (min-width: 650px) {
+  main section.get-involved .grid-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 aside section {
   background-color: #ffcd00;
