@@ -262,7 +262,6 @@ aside {
 	margin: 2% 0;
 
 	section {
-
 		.api-container {
 			background-color: @gold;
 			padding: 5%;
@@ -323,11 +322,18 @@ footer {
 		div {
 			display: flex;
 			justify-content: center;
-			padding: 5%;
 
 			img {
 				max-width: 45px;
 			} // End img
+
+			@media (min-width: 750px) {
+				padding: 1%;
+			} // End media query
 		} // End div
 	} // End div
+
+	@media (min-width: 900px) {
+		padding-bottom: 2%;
+	} // End media query
 } // End footer
