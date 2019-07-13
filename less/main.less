@@ -195,7 +195,7 @@ main {
 				@media (min-width: 950px) {
 					width: 400px;
 					margin: auto;
-				}
+				} // End media query
 			} // End h3
 
 			.grid-container {
@@ -244,39 +244,64 @@ main {
 						} // End p
 					} // End square-content
 
-					@media (min-width: 650px) {
+					@media (min-width: 700px) {
 						margin: 3%;
-					}
+					} // End media query
 				} // End square
 
-				@media (min-width: 650px) {
+				@media (min-width: 700px) {
 					.flex-display();
 					justify-content: center;
-				}
+				} // End media query
 			} // End div	
 		} // End get-involved
 	} // End sections
 } // End main
 
 aside {
+	margin: 2% 0;
+
 	section {
-		background-color: @gold;
-		padding: 5%;
 
-		div {
-			color: #fff;
-			.border-line();
+		.api-container {
+			background-color: @gold;
+			padding: 5%;
 
-			h4 {
-				.heading3();
-			} // End h4
-		} // End div
+			div {
+				color: #fff;
+				.border-line();
+
+				h4 {
+					.heading3();
+				} // End h4
+			} // End div
+		} // End api-container
+
+		@media (min-width: 750px) {
+			width: 75%;
+			margin: 0 auto;
+		} // End media query
+
+		@media (min-width: 900px) {
+			max-width: 400px;
+			margin-right: 5%;
+		} // End media query
 	} // End section
 
 	img {
 		width: 100%;
 		margin: 5% 0;
+
+		@media (min-width: 900px) {
+			margin: 0;
+		} // End media query
 	} // End img
+
+	@media (min-width: 900px) {
+		.flex-display();
+		width: 85%;
+		margin: 3% auto;
+	} // End media query
 } // End aside
 
 footer {

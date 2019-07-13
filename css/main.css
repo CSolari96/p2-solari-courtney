@@ -316,12 +316,12 @@ main section.get-involved .grid-container .square .square-content p {
       align-self: flex-end;
   z-index: 1;
 }
-@media (min-width: 650px) {
+@media (min-width: 700px) {
   main section.get-involved .grid-container .square {
     margin: 3%;
   }
 }
-@media (min-width: 650px) {
+@media (min-width: 700px) {
   main section.get-involved .grid-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -331,25 +331,54 @@ main section.get-involved .grid-container .square .square-content p {
             justify-content: center;
   }
 }
-aside section {
+aside {
+  margin: 2% 0;
+}
+aside section .api-container {
   background-color: #ffcd00;
   padding: 5%;
 }
-aside section div {
+aside section .api-container div {
   color: #fff;
   border-bottom: 2px solid #da1f1c;
   padding-bottom: 1%;
   margin-bottom: 2%;
 }
-aside section div h4 {
+aside section .api-container div h4 {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 20px;
 }
+@media (min-width: 750px) {
+  aside section {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 900px) {
+  aside section {
+    max-width: 400px;
+    margin-right: 5%;
+  }
+}
 aside img {
   width: 100%;
   margin: 5% 0;
+}
+@media (min-width: 900px) {
+  aside img {
+    margin: 0;
+  }
+}
+@media (min-width: 900px) {
+  aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 85%;
+    margin: 3% auto;
+  }
 }
 footer {
   background-color: #ffcd00;
