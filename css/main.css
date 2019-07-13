@@ -270,3 +270,30 @@ aside img {
   width: 100%;
   margin: 5% 0;
 }
+footer {
+  background-color: #ffcd00;
+  padding-bottom: 5%;
+  color: #fff;
+}
+footer div {
+  background-color: #4d4d4d;
+  padding: 3%;
+  text-align: center;
+}
+footer div img {
+  max-width: 80px;
+  display: block;
+  margin: auto;
+}
+footer div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5%;
+}
+footer div div img {
+  max-width: 45px;
+}
