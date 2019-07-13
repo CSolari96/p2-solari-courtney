@@ -170,6 +170,11 @@ main .banner-image div {
   padding: 5%;
   color: #fff;
 }
+@media (min-width: 950px) {
+  main .banner-image div {
+    padding-left: 10%;
+  }
+}
 main .banner-image h2 {
   font-family: quatro-slab, serif;
   font-weight: 600;
@@ -179,6 +184,16 @@ main .banner-image h2 {
 }
 main .banner-image h2 span {
   color: #ffcd00;
+}
+@media (min-width: 600px) {
+  main .banner-image h2 {
+    font-size: 37px;
+  }
+}
+@media (min-width: 950px) {
+  main .banner-image h2 {
+    font-size: 45px;
+  }
 }
 main .banner-image a {
   background-color: #da1f1c;

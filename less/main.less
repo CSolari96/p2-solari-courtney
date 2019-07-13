@@ -109,6 +109,10 @@ main {
 			min-height: 130px;
 			padding: 5%;
 			color: #fff;
+
+			@media (min-width: 950px) {
+				padding-left: 10%;
+			}
 		} // End div
 
 		h2 {
@@ -118,6 +122,14 @@ main {
 			span {
 				color: @gold;
 			} // End span
+
+			@media (min-width: 600px) {
+				font-size: 37px;
+			} // End min-width 600
+
+			@media (min-width: 950px) {
+				font-size: 45px;
+			}
 		} // End h2
 
 		a {
