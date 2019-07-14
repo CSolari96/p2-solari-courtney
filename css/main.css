@@ -312,6 +312,7 @@ main section.get-involved .grid-container .square:hover .flipper {
           transform: rotateY(180deg);
 }
 main section.get-involved .grid-container .square .flipper {
+  width: 100%;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   -webkit-transform-style: preserve-3d;
@@ -401,7 +402,7 @@ main section.get-involved .grid-container .square .flipper .back-content p {
   margin: 5%;
 }
 @media (min-width: 700px) {
-  main section.get-involved .grid-container .square .flipper {
+  main section.get-involved .grid-container .square {
     margin: 3%;
   }
 }
