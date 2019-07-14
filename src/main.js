@@ -40,6 +40,7 @@ xmlhttp.onreadystatechange = function() {
     function displayQuestion() {
     	questionCounter++;
     	answerInputContainer.style.display = "block";
+    	answerBox.value = "";
     	answerDisplay.style.display = "none";
 
     	apiResult.sort(function(a, b){return 0.5 - Math.random()});  // Sort returned array
