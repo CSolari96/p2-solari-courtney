@@ -304,26 +304,47 @@ main section.get-involved .grid-container .square {
   max-width: 330px;
   margin: 5% auto;
   position: relative;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+main section.get-involved .grid-container .square:hover .flipper {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+main section.get-involved .grid-container .square .flipper {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
   background-size: cover;
   background-position: center;
 }
-main section.get-involved .grid-container .square.join {
+main section.get-involved .grid-container .square .flipper.join {
   background-image: url("../img/join-tile.jpg");
 }
-main section.get-involved .grid-container .square.events {
+main section.get-involved .grid-container .square .flipper.events {
   background-image: url("../img/events-tile.jpg");
 }
-main section.get-involved .grid-container .square.donate {
+main section.get-involved .grid-container .square .flipper.donate {
   background-image: url("../img/donate-tile.jpg");
 }
-main section.get-involved .grid-container .square:after {
+main section.get-involved .grid-container .square .flipper:after {
   content: "";
   display: block;
   padding-bottom: 100%;
   background-color: #004c97;
   opacity: 0.6;
 }
-main section.get-involved .grid-container .square .square-content {
+main section.get-involved .grid-container .square .flipper .square-content,
+main section.get-involved .grid-container .square .flipper .back-content {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main section.get-involved .grid-container .square .flipper .square-content {
   position: absolute;
   width: 90%;
   height: 90%;
@@ -334,17 +355,53 @@ main section.get-involved .grid-container .square .square-content {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
-main section.get-involved .grid-container .square .square-content p {
+main section.get-involved .grid-container .square .flipper .square-content p {
   font-size: 40px;
   color: #fff;
   text-align: right;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  z-index: 1;
+}
+main section.get-involved .grid-container .square .flipper .back-content {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: #004c97;
+  height: 90%;
+  padding: 5%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+main section.get-involved .grid-container .square .flipper .back-content h4 {
+  font-family: quatro-slab, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #da1f1c;
+  padding-bottom: 1%;
+  margin-bottom: 2%;
+  width: 50%;
+  margin: 0 auto;
+}
+main section.get-involved .grid-container .square .flipper .back-content p {
+  margin: 5%;
 }
 @media (min-width: 700px) {
-  main section.get-involved .grid-container .square {
+  main section.get-involved .grid-container .square .flipper {
     margin: 3%;
   }
 }

@@ -204,49 +204,92 @@ main {
 					max-width: 330px;
 					margin: 5% auto;
 					position: relative;
-					background-size: cover;
-					background-position: center;
+					
+					perspective: 1000px;
 
-					&.join {
-						background-image: url("../img/join-tile.jpg");
-					} // End join
+					&:hover .flipper {
+						transform: rotateY(180deg);
+					}
 
-					&.events {
-						background-image: url("../img/events-tile.jpg");
-					} // End events
+					.flipper {
+						transition: 0.6s;
+						transform-style: preserve-3d;
+						position: relative;
+						background-size: cover;
+						background-position: center;
 
-					&.donate {
-						background-image: url("../img/donate-tile.jpg");
-					} //End donate
+						&.join {
+							background-image: url("../img/join-tile.jpg");
+						} // End join
 
-					&:after {
-						content: "";
-						display: block;
-						padding-bottom: 100%;
-						background-color: @blue;
-						opacity: 0.6;
-					} // End after
+						&.events {
+							background-image: url("../img/events-tile.jpg");
+						} // End events
 
-					.square-content {
-						position: absolute;
-						width: 90%;
-						height: 90%;
-						padding: 5%;
-						display: flex;
-						justify-content: flex-end;
+						&.donate {
+							background-image: url("../img/donate-tile.jpg");
+						} //End donate
 
-						p {
-							font-size: 40px;
+						&:after {
+							content: "";
+							display: block;
+							padding-bottom: 100%;
+							background-color: @blue;
+							opacity: 0.6;
+						} // End after
+
+						.square-content, .back-content {
+							backface-visibility: hidden;
+							position: absolute;
+							top: 0;
+							left: 0;
+						}
+
+						.square-content {
+							position: absolute;
+							width: 90%;
+							height: 90%;
+							padding: 5%;
+							display: flex;
+							justify-content: flex-end;
+							z-index: 2;
+							transform: rotateY(0deg);
+
+							p {
+								font-size: 40px;
+								color: #fff;
+								text-align: right;
+								align-self: flex-end;
+							} // End p
+						} // End square-content
+
+						.back-content {
+							transform: rotateY(180deg);
+							background-color: @blue;
+							height: 90%;
+							padding: 5%;
 							color: #fff;
-							text-align: right;
-							align-self: flex-end;
-							z-index: 1;
-						} // End p
-					} // End square-content
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							text-align: center;
 
-					@media (min-width: 700px) {
-						margin: 3%;
-					} // End media query
+							h4 {
+								.heading2();
+								.border-line();
+								width: 50%;
+								margin: 0 auto;
+							}
+
+							p {
+								margin: 5%;
+							}
+						}
+
+						@media (min-width: 700px) {
+							margin: 3%;
+						} // End media query
+					} // End flipper
 				} // End square
 
 				@media (min-width: 700px) {
