@@ -90,4 +90,4 @@ xmlhttp.send();
 
 
 // Show donate menu 3 seconds after page loads
-setTimeout(showMenu, 3000);
+setTimeout(showDonateMenu, 3000);
