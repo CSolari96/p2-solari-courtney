@@ -73,14 +73,16 @@ xmlhttp.onreadystatechange = function() {
     	resultContainers[1].innerText = `The correct answer is ${question.answer}.`;	// Display correct answer
     	resultContainers[2].innerText = `Your score is ${score}`;						// Display current user score
 
-    	isGameOver();
+    	isGameOver();		// Check to see if game is over		
     }
 
+    // Check to see if 5 questions have been shown to end game
     function isGameOver() {
     	// If five questions have been displayed, end game
     	if (questionCounter >= 5) {
     		nextQuestion.style.display = "none";	// Hide next question button
 
+    		// Wait 5 seconds, then display game over message
     		setTimeout(function() {
     			questionContainer.style.display = "none";		// Hide question container
 
@@ -97,7 +99,7 @@ xmlhttp.onreadystatechange = function() {
     // When user clicks check answer button, run checkAnswer function
     answerButton.addEventListener("click", checkAnswer);
 
-    // When user clicks next question button, display the next question and check questionCounter
+    // When user clicks next question button, display the next question
     nextQuestion.addEventListener("click", displayQuestion);
   }
 };
