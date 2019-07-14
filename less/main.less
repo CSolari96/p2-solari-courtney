@@ -547,6 +547,45 @@ aside {
 	} // End conference-info
 } // End aside
 
+.donate-menu {
+	color: #fff;
+
+	#open-donate {
+		position: fixed;
+		.button();
+		font-size: 30px;
+		width: 50px;
+		bottom: 20px;
+		right: 20px;
+	} // End open-donate
+
+	.slideout {
+		position: fixed;
+		background-color: @red;
+		width: 100%;
+		bottom: 20px;
+		right: -550px;
+
+		a {
+			.button();
+			background-color: @gray;
+
+			&:hover {
+				background-color: @gold;
+			} // End hover
+		} // End a
+
+		@media (min-width: 500px) {
+			width: 500px;
+		}
+	} // End slideout
+
+	.showDonateMenu {
+		right: 0 !important;
+		transition: all 1s;
+	}
+} // End donate-menu
+
 footer {
 	background-color: @gold;
 	padding-bottom: 5%;
