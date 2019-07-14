@@ -152,7 +152,6 @@ header .flex-display .desktop-menu {
   header .flex-display .desktop-menu {
     display: block;
     width: 66%;
-    max-height: 55px;
     margin-left: auto;
     padding-right: 5%;
     -ms-flex-item-align: center;
