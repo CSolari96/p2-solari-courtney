@@ -39,6 +39,8 @@ xmlhttp.onreadystatechange = function() {
     // Display a random question
     function displayQuestion() {
     	questionCounter++;
+    	answerInputContainer.style.display = "block";
+    	answerDisplay.style.display = "none";
 
     	apiResult.sort(function(a, b){return 0.5 - Math.random()});  // Sort returned array
 
@@ -72,16 +74,18 @@ xmlhttp.onreadystatechange = function() {
 
 
     answerButton.addEventListener("click", checkAnswer);
+    nextQuestion.addEventListener("click", function() {
+    	displayQuestion();
+
+    	if (questionCounter >= 5) {
+    		this.style.display = "none";
+
+    	}
+    })
 
     displayQuestion();
 
-    while (questionCounter < 5) {
-    	nextQuestion.addEventListener("click", displayQuestion);
-
-    	if (questionCounter == 5) {
-    		nextQuestion.style.display = "none";
-    	}
-    }
+    
 
   }
 };
