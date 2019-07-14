@@ -391,7 +391,7 @@ aside {
 			height: 90%;
 
 			div {
-				color: #fff;
+				color: @blue;
 				
 				&:first-child {
 					.border-line();
@@ -404,7 +404,7 @@ aside {
 				&#quiz {
 					#question {
 						.border-line();
-					}
+					} // End #question
 
 					#answer-input {
 						input {
@@ -414,20 +414,20 @@ aside {
 							.paragraph();
 							padding: 2%;
 							margin: 3% 0;
-						}
-					}
+						} // End input
+					} // End answer-input
 
 					#answer-display {
 						display: none;
 
 						p:first-child {
 							font-weight: 700;
-						}
+						} // End p:first-child
 					} // End answer-display
 
 					button {
 						.button();
-					}
+					} // End button
 				} // End #quiz
 			} // End div
 		} // End api-container
