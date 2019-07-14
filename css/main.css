@@ -803,12 +803,15 @@ aside.conference-info section div a:active {
   -webkit-transition: all 1s;
   transition: all 1s;
   padding: 1% 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .donate-menu #slideout #close-donate {
   color: #fff;
   font-size: 50px;
   font-weight: 700;
-  margin: 2%;
+  margin: 2% 5% 2% 2%;
   text-decoration: none;
 }
 .donate-menu #slideout .donate-button {
