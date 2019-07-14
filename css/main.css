@@ -189,6 +189,10 @@ header .flex-display .desktop-menu {
     list-style-type: none;
     padding: 2%;
   }
+  header .flex-display .desktop-menu ul li a {
+    -webkit-transition: border 0.5s;
+    transition: border 0.5s;
+  }
   header .flex-display .desktop-menu ul li a:link,
   header .flex-display .desktop-menu ul li a:visited {
     color: #fff;
@@ -196,6 +200,9 @@ header .flex-display .desktop-menu {
   }
   header .flex-display .desktop-menu ul li a:hover {
     color: #ffcd00;
+    border-bottom: 2px solid #da1f1c;
+    padding-bottom: 1%;
+    margin-bottom: 2%;
     -webkit-transition: all 0.6s;
     transition: all 0.6s;
   }
