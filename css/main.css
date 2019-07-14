@@ -168,6 +168,13 @@ header .flex-display .desktop-menu {
     display: inline;
     list-style-type: none;
     padding: 2%;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+  }
+  header .flex-display .desktop-menu ul li:hover {
+    background-color: #da1f1c;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
   }
   header .flex-display .desktop-menu ul li a:link,
   header .flex-display .desktop-menu ul li a:visited {
