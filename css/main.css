@@ -307,6 +307,12 @@ main section.home-intro div img {
         align-self: center;
   }
 }
+main section.get-involved {
+  background-image: url("../img/pinstripes.jpg");
+  background-position: center center;
+  background-repeat: repeat;
+  padding: 3% 0;
+}
 main section.get-involved h3 {
   font-family: quatro-slab, serif;
   font-weight: 500;
