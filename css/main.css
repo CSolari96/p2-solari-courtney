@@ -766,15 +766,16 @@ aside.conference-info section div a:active {
 .donate-menu #slideout {
   position: fixed;
   background-color: #da1f1c;
-  width: 100%;
+  width: 96%;
   bottom: 20px;
-  right: -550px;
+  right: -1000px;
   -webkit-transition: all 1s;
   transition: all 1s;
+  padding: 1% 3%;
 }
 .donate-menu #slideout #close-donate {
   color: #fff;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: 700;
   margin: 2%;
   text-decoration: none;
@@ -808,7 +809,7 @@ aside.conference-info section div a:active {
 .donate-menu #slideout .donate-button:hover {
   background-color: #ffcd00;
 }
-@media (min-width: 500px) {
+@media (min-width: 550px) {
   .donate-menu #slideout {
     width: 500px;
   }
