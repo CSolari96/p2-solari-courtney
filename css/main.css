@@ -501,17 +501,17 @@ main .news-page div article div a:hover {
   }
 }
 aside {
-  margin: 2% 0;
+  margin: 2% 0 10% 0;
 }
 aside section .api-container {
   background-color: #ffcd00;
   padding: 5%;
-  height: 100%;
+  height: 90%;
 }
 aside section .api-container div {
   color: #fff;
 }
-aside section .api-container div:first-of-type {
+aside section .api-container div:first-child {
   border-bottom: 2px solid #da1f1c;
   padding-bottom: 1%;
   margin-bottom: 2%;
@@ -522,8 +522,54 @@ aside section .api-container div h4 {
   font-style: normal;
   font-size: 20px;
 }
+aside section .api-container div#quiz #question {
+  border-bottom: 2px solid #da1f1c;
+  padding-bottom: 1%;
+  margin-bottom: 2%;
+}
+aside section .api-container div#quiz #answer-input input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 300px;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19px;
+  color: #707070;
+  padding: 2%;
+  margin: 3% 0;
+}
 aside section .api-container div#quiz #answer-display {
   display: none;
+}
+aside section .api-container div#quiz #answer-display p:first-child {
+  font-weight: 700;
+}
+aside section .api-container div#quiz button {
+  background-color: #da1f1c;
+  border-radius: 40px;
+  color: #fff;
+  font-family: quatro-slab, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: uppercase;
+  width: 180px;
+  padding: 15px 5px;
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  margin: 3% 0;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+aside section .api-container div#quiz button:hover,
+aside section .api-container div#quiz button:active {
+  background-color: #4d4d4d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 @media (min-width: 750px) {
   aside section {
@@ -533,8 +579,13 @@ aside section .api-container div#quiz #answer-display {
 }
 @media (min-width: 900px) {
   aside section {
-    width: 35%;
+    max-width: 400px;
     margin-right: 5%;
+  }
+}
+@media (min-width: 1150px) {
+  aside section {
+    width: 40%;
   }
 }
 aside img {
