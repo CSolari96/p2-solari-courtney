@@ -864,31 +864,104 @@ footer {
   background-color: #ffcd00;
   padding-bottom: 5%;
   color: #fff;
-}
-footer div {
-  background-color: #4d4d4d;
-  padding: 3%;
-  text-align: center;
-}
-footer div img {
-  max-width: 80px;
-  display: block;
-  margin: auto;
-}
-footer div div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-footer div div img {
+footer .left,
+footer .center,
+footer .right {
+  background-color: #4d4d4d;
+  padding: 3%;
+  width: 94%;
+  text-align: center;
+}
+footer .left h4,
+footer .center h4,
+footer .right h4 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  font-size: 18px;
+}
+footer .left p,
+footer .center p,
+footer .right p {
+  font-size: 15px;
+  padding: 2% 0;
+}
+@media (min-width: 750px) {
+  footer .left,
+  footer .center,
+  footer .right {
+    width: 30%;
+  }
+}
+@media (min-width: 750px) {
+  footer .left {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    text-align: left;
+  }
+}
+footer .center {
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+footer .center img {
+  max-width: 80px;
+  display: block;
+  margin: 0 auto;
+}
+footer .center div {
+  width: 50%;
+  margin: 5% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+footer .center div img {
   max-width: 45px;
 }
 @media (min-width: 750px) {
-  footer div div {
+  footer .center div {
     padding: 1%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+@media (min-width: 750px) {
+  footer .right {
+    text-align: right;
+  }
+}
+@media (min-width: 750px) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 @media (min-width: 900px) {
