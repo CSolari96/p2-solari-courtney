@@ -18,21 +18,24 @@ menuClose.addEventListener("click", function() {
 
 
 // Donate Menu
-const donateMenu = document.getElementById("slideout");
-const openDonateMenu = document.getElementById("open-donate");
-const closeDonateMenu = document.getElementById("close-donate");
+const donateMenu = document.getElementById("slideout");				// Store donation slideout menu
+const openDonateMenu = document.getElementById("open-donate");		// Store open donate menu button
+const closeDonateMenu = document.getElementById("close-donate");	// Store close donate menu button
 
-function showMenu() {
+// Show the donation menu and hide open button
+function showDonateMenu() {
 	donateMenu.classList.add("showDonateMenu");
 	openDonateMenu.style.display = "none";
 }
 
-function hideMenu() {
+// Hide donation menu and show open button
+function hideDonateMenu() {
 	donateMenu.classList.remove("showDonateMenu");
 	openDonateMenu.style.display = "block";
 }
 
-setTimeout(showMenu, 3000);
+// When the donation menu open button is clicked, show the donation menu
+openDonateMenu.addEventListener("click", showDonateMenu);
 
-openDonateMenu.addEventListener("click", showMenu);
-closeDonateMenu.addEventListener("click", hideMenu);
+// When the donation menu close button is clicked, hide the donation menu
+closeDonateMenu.addEventListener("click", hideDonateMenu);
