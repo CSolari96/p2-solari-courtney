@@ -15,3 +15,24 @@ menuClose.addEventListener("click", function() {
 	menuOpen.style.display = "block";
 });
 
+
+
+// Donate Menu
+const donateMenu = document.getElementById("slideout");
+const openDonateMenu = document.getElementById("open-donate");
+const closeDonateMenu = document.getElementById("close-donate");
+
+function showMenu() {
+	donateMenu.classList.add("showDonateMenu");
+	openDonateMenu.style.display = "none";
+}
+
+function hideMenu() {
+	donateMenu.classList.remove("showDonateMenu");
+	openDonateMenu.style.display = "block";
+}
+
+setTimeout(showMenu, 3000);
+
+openDonateMenu.addEventListener("click", showMenu);
+closeDonateMenu.addEventListener("click", hideMenu);

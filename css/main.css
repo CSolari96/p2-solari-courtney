@@ -763,14 +763,23 @@ aside.conference-info section div a:active {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.donate-menu .slideout {
+.donate-menu #slideout {
   position: fixed;
   background-color: #da1f1c;
   width: 100%;
   bottom: 20px;
   right: -550px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
-.donate-menu .slideout a {
+.donate-menu #slideout #close-donate {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 2%;
+  text-decoration: none;
+}
+.donate-menu #slideout .donate-button {
   background-color: #da1f1c;
   border-radius: 40px;
   color: #fff;
@@ -790,17 +799,17 @@ aside.conference-info section div a:active {
   transition: 0.3s;
   background-color: #4d4d4d;
 }
-.donate-menu .slideout a:hover,
-.donate-menu .slideout a:active {
+.donate-menu #slideout .donate-button:hover,
+.donate-menu #slideout .donate-button:active {
   background-color: #4d4d4d;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.donate-menu .slideout a:hover {
+.donate-menu #slideout .donate-button:hover {
   background-color: #ffcd00;
 }
 @media (min-width: 500px) {
-  .donate-menu .slideout {
+  .donate-menu #slideout {
     width: 500px;
   }
 }
