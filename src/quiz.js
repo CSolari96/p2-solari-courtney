@@ -36,12 +36,13 @@ xmlhttp.onreadystatechange = function() {
 
     // Compare the user's answer to the correct answer
     function checkAnswer() {
-    	const userAnswer = answerBox.value.trim().toLowerCase();	// Grab and store user answer
+    	const userAnswer = answerBox.value.toLowerCase().trim();	// Grab and store user answer
     	answerInputContainer.style.display = "none";				// Hide answer input container
     	answerDisplay.style.display = "block";						// Show correct answer display container
 
     	// Check user's answer against correct answer and increment or decrement the score
-    	if (userAnswer == question.answer.trim().toLowerCase()) {
+    	// See if correct answer includes user answer to account for minor differences
+        if (question.answer.toLowerCase().trim().includes(userAnswer)) {
     		score = score + question.value;		// Add to user score
 
     		resultContainers[0].innerText = "Correct!";		// Display message that user was correct
@@ -69,8 +70,8 @@ xmlhttp.onreadystatechange = function() {
 
 	    		// Display game over message and final score
 	    		resultContainers[0].innerText = "Game Over!";
-	    		resultContainers[1].innerText = "Your final score is:";
-	    		resultContainers[2].innerText = score;
+	    		resultContainers[1].innerText = `Your final score is ${score}`;
+	    		resultContainers[2].innerText = "";
     		}, 5000);
     	}
     }
