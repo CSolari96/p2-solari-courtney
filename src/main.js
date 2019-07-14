@@ -40,16 +40,17 @@ xmlhttp.onreadystatechange = function() {
 
     // Display a random question
     function displayQuestion() {
-    	questionCounter++;	// Increment questionCounter for each question displayed
     	answerInputContainer.style.display = "block";		// Show answer input container
     	answerBox.value = "";								// Clear answer input box
     	answerDisplay.style.display = "none";				// Hide correct answer display container
 
     	apiResult.sort(function(a, b){return 0.5 - Math.random()});  // Sort returned array
 
-    	question = apiResult.pop();	// Remove and store last question from array to prevent duplicates
+    	question = apiResult[0];	// Remove and store last question from array to prevent duplicates
 
     	questionContainer.innerText = question.question;	// Display question in question container
+
+    	questionCounter++;	// Increment questionCounter for each question displayed
     }
 
     // Compare the user's answer to the correct answer
@@ -71,6 +72,24 @@ xmlhttp.onreadystatechange = function() {
 
     	resultContainers[1].innerText = `The correct answer is ${question.answer}.`;	// Display correct answer
     	resultContainers[2].innerText = `Your score is ${score}`;						// Display current user score
+
+    	isGameOver();
+    }
+
+    function isGameOver() {
+    	// If five questions have been displayed, end game
+    	if (questionCounter >= 5) {
+    		nextQuestion.style.display = "none";	// Hide next question button
+
+    		setTimeout(function() {
+    			questionContainer.style.display = "none";		// Hide question container
+
+	    		// Display game over message and final score
+	    		resultContainers[0].innerText = "Game Over!";
+	    		resultContainers[1].innerText = "Your final score is:";
+	    		resultContainers[2].innerText = score;
+    		}, 5000);
+    	}
     }
 
     displayQuestion();		// Show first question
@@ -79,21 +98,7 @@ xmlhttp.onreadystatechange = function() {
     answerButton.addEventListener("click", checkAnswer);
 
     // When user clicks next question button, display the next question and check questionCounter
-    nextQuestion.addEventListener("click", function() {
-    	displayQuestion();		// Display next question
-
-    	// If five questions have been displayed, end game
-    	if (questionCounter >= 5) {
-    		this.style.display = "none";	// Hide next question button
-
-    		questionContainer.style.display = "none";		// Hide question container
-
-    		// Display game over message and final score
-    		resultContainers[0].innerText = "Game Over!";
-    		resultContainers[1].innerText = "Your final score is:";
-    		resultContainers[2].innerText = score;
-    	}
-    })
+    nextQuestion.addEventListener("click", displayQuestion);
   }
 };
 xmlhttp.open('GET', 'http://jservice.io/api/clues?category=472', true);
