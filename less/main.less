@@ -45,11 +45,27 @@ header {
 		transition: 0.5s;
 		text-align: center;
 
+		li:first-of-type {
+			font-size: 50px;
+			transition: all 0.6s;
+
+			&:hover {
+				transform: rotate(90deg);
+			} // End :hover
+		} // End li:first-of-type
+
 		a {
 			padding: 1%;
 			text-decoration: none;
 			display: block;
 			transition: 0.3s;
+			color: #fff;
+			transition: all 0.6s;
+
+			&:hover {
+				color: @gold;
+				transition: all 0.6s;
+			} // End :hover
 		} // End a
 
 		.close-menu {
@@ -89,17 +105,18 @@ header {
 						display: inline;
 						list-style-type: none;
 						padding: 2%;
-						transition: all 0.6s;
 
-						&:hover {
-							background-color: @red;
-							transition: all 0.6s;
-						}
+						a {
+							&:link, &:visited {
+								color: #fff;
+								text-decoration: none;
+							} // End :link and :visited
 
-						a:link, a:visited {
-							color: #fff;
-							text-decoration: none;
-						} // End a:link, a:visted
+							&:hover {
+								color: @gold;
+								transition: all 0.6s;
+							} // End :hover
+						} // End a
 					} // End li
 				} // End ul
 			} // End Media Query
