@@ -14,3 +14,76 @@ menuClose.addEventListener("click", function() {
 	mobileMenu.style.width = "0";
 	menuOpen.style.display = "block";
 });
+
+
+
+// Are You Smarter than an Ag Teacher Quiz
+const questionContainer = document.getElementById("question");
+const answerInputContainer = document.getElementById("answer-input");
+const answerDisplay = document.getElementById("answer-display");
+const answerBox = document.querySelector("#quiz input");
+const answerButton = document.querySelector("#quiz button");
+const nextQuestion = document.querySelector("#answer-display button");
+let score = 0;
+let questionCounter = 0;
+
+// jService API Request for questions from the agriculture category
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var apiResult = JSON.parse(this.responseText);
+   
+    // Set empty question and answer string variables to be set later
+    let question = "";
+
+    // Display a random question
+    function displayQuestion() {
+    	questionCounter++;
+
+    	apiResult.sort(function(a, b){return 0.5 - Math.random()});  // Sort returned array
+
+    	question = apiResult[0];	// Select first question in array
+
+    	questionContainer.innerText = question.question;	// Display question in question container
+    }
+
+    // Compare the user's answer to the correct answer
+    function checkAnswer() {
+    	const userAnswer = answerBox.value.trim().toLowerCase();	// Grab and store user answer
+    	answerInputContainer.style.display = "none";
+    	answerDisplay.style.display = "block";
+
+    	const resultContainers = document.querySelectorAll("#answer-display p");
+
+    	// If the user's answer is correct, increment the score otherwise decrement the score
+    	if (userAnswer == question.answer.trim().toLowerCase()) {
+    		score = score + question.value;
+
+    		resultContainers[0].innerText = "Correct!";
+    	} else {
+    		score = score - question.value;
+
+    		resultContainers[0].innerText = "Incorrect!";
+    	}
+
+    	resultContainers[1].innerText = `The correct answer is ${question.answer}.`;
+    	resultContainers[2].innerText = `Your score is ${score}`;
+    }
+
+
+    answerButton.addEventListener("click", checkAnswer);
+
+    displayQuestion();
+
+    while (questionCounter < 5) {
+    	nextQuestion.addEventListener("click", displayQuestion);
+
+    	if (questionCounter == 5) {
+    		nextQuestion.style.display = "none";
+    	}
+    }
+
+  }
+};
+xmlhttp.open('GET', 'http://jservice.io/api/clues?category=472', true);
+xmlhttp.send();

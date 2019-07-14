@@ -391,11 +391,20 @@ aside {
 
 			div {
 				color: #fff;
-				.border-line();
+				
+				&:first-of-type {
+					.border-line();
+				}
 
 				h4 {
 					.heading3();
 				} // End h4
+
+				&#quiz {
+					#answer-display {
+						display: none;
+					}
+				}
 			} // End div
 		} // End api-container
 
