@@ -89,5 +89,6 @@ xmlhttp.open('GET', 'http://jservice.io/api/clues?category=472', true);
 xmlhttp.send();
 
 
+// Donation Menu Slideout
 // Show donate menu 3 seconds after page loads
 setTimeout(showDonateMenu, 3000);
