@@ -99,6 +99,7 @@ header #open-menu {
   font-size: 30px;
   padding: 1% 5% 1% 2%;
   z-index: 2;
+  cursor: pointer;
 }
 @media (min-width: 950px) {
   header #open-menu {
@@ -794,6 +795,7 @@ aside.conference-info section div a:active {
   width: 50px;
   bottom: 20px;
   right: 20px;
+  cursor: pointer;
 }
 .donate-menu #open-donate:hover,
 .donate-menu #open-donate:active {
